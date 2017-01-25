@@ -12,7 +12,7 @@
 
 - Selection: 
 
-``` git checkout selection ```
-``` java -classpath java/out Main < algs4-data/tinyT.txt ```
-``` php php/index.php algs4-data/tinyT.txt ```
-``` node js/out/index.js algs4-data/tinyT.txt ```
+  1) ``` git checkout selection ```
+  2) ``` java -classpath java/out Main < algs4-data/tinyT.txt ```
+  3) ``` php php/index.php algs4-data/tinyT.txt ```
+  4) ``` node js/out/index.js algs4-data/tinyT.txt ```
