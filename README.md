@@ -19,7 +19,7 @@ php php/index.php algs4-data/tinyT.txt
 node js/out/index.js algs4-data/tinyT.txt 
 ```
 
-**Benchmark:**
+**Benchmark for 100,000 nums:**
 
 - java ~30sec
 - js ~15sec
