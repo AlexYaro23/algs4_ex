@@ -8,9 +8,9 @@
 - PHP: -
 - js: ``` npm run build ```
 
-## Sorting examples
+## Sorting examples:
 
-- Selection: 
+##- Selection 
 
 ``` 
 git checkout selection
@@ -21,7 +21,23 @@ node js/out/index.js algs4-data/tinyT.txt
 
 **Benchmark for 100,000 nums:**
 
-- java ~30sec
-- js ~15sec
-- php ~980sec
+    - java ~30sec
+    - js ~15sec
+    - php ~980sec
+
+
+##- Insertion
+
+``` 
+git checkout insertion
+java -classpath java/out Main < algs4-data/tinyT.txt
+php php/index.php algs4-data/tinyT.txt
+node js/out/index.js algs4-data/tinyT.txt 
+```
+
+**Benchmark for 100,000 nums:**
+
+    - java ~32.7sec
+    - js ~7.6sec
+    - php ~939sec
 
