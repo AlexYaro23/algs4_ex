@@ -14,35 +14,58 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Selection = function (_Sorter) {
-    _inherits(Selection, _Sorter);
+var Merge = function (_Sorter) {
+    _inherits(Merge, _Sorter);
 
-    function Selection() {
+    function Merge() {
         var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-        _classCallCheck(this, Selection);
+        _classCallCheck(this, Merge);
 
-        return _possibleConstructorReturn(this, (Selection.__proto__ || Object.getPrototypeOf(Selection)).call(this, arr));
+        var _this = _possibleConstructorReturn(this, (Merge.__proto__ || Object.getPrototypeOf(Merge)).call(this, arr));
+
+        _this.aux = [];
+        return _this;
     }
 
-    _createClass(Selection, [{
+    _createClass(Merge, [{
         key: 'sort',
         value: function sort() {
-            var N = this.arr.length;
-            for (var i = 0; i < N; i++) {
-                var min = i;
-                for (var j = i + 1; j < N; j++) {
-                    if (this.less(this.arr[j], this.arr[min])) {
-                        min = j;
-                    }
-                }
+            this.sortRec(0, this.arr.length);
+        }
+    }, {
+        key: 'sortRec',
+        value: function sortRec(lo, hi) {
+            if (hi <= lo) return;
+            var mid = lo + (hi - lo) / 2;
+            this.sortRec(lo, mid);
+            this.sortRec(mid + 1, hi);
+            merge(lo, mid, hi);
+        }
+    }, {
+        key: 'merge',
+        value: function merge(lo, mid, hi) {
+            for (var k = lo; k < hi; k++) {
+                this.aux[k] = a[k];
+            }
 
-                this.exch(i, min);
+            var i = lo;
+            var j = mid + 1;
+            for (var _k = lo; _k <= hi; _k++) {
+                if (i > mid) {
+                    this.a[_k] = this.aux[j++];
+                } else if (j > hi) {
+                    this.a[_k] = this.aux[i++];
+                } else if (this.less(this.a[j], this.aux[i])) {
+                    this.a[_k] = this.aux[j++];
+                } else {
+                    this.a[_k] = this.aux[i++];
+                }
             }
         }
     }]);
 
-    return Selection;
+    return Merge;
 }(_Sorter3.default);
 
-module.exports = Selection;
+module.exports = Merge;
