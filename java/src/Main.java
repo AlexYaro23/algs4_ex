@@ -1,4 +1,4 @@
-import com.test.sorting.Selection;
+import com.test.sorting.MergeBU;
 import com.test.util.StdIn;
 
 public class Main {
@@ -8,7 +8,7 @@ public class Main {
         int[] arr = StdIn.readAllInts();
 
         long startTime = System.currentTimeMillis();
-        Selection sort = new Selection(arr);
+        MergeBU sort = new MergeBU(arr);
         sort.sort();
         sort.show();
         long endTime = System.currentTimeMillis();

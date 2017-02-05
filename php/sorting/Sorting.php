@@ -27,7 +27,7 @@ abstract class Sorting
     {
         $count = count($this->data);
         for ($i = 0 ; $i < $count; $i++) {
-            echo $this->data[$i];
+            echo $this->data[$i] . ' ';
         }
 
         echo PHP_EOL;
