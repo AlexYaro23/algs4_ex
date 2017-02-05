@@ -18,7 +18,10 @@ class Merge extends Sorter {
     }
 
     merge(arr, lo, mid, hi) {
-        const aux = arr.slice();
+        let aux = [];
+        for (let k = lo; k <= hi; k++) {
+            aux[k] = arr[k];
+        }
 
         let i = lo;
         let j = mid+1;
