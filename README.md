@@ -73,3 +73,19 @@ node js/out/index.js algs4-data/tinyT.txt
     - js ~62sec
     - php ~3.6sec
 
+
+##- MergeBU
+
+``` 
+git checkout mergeBU
+java -classpath java/out Main < algs4-data/tinyT.txt
+php php/index.php algs4-data/tinyT.txt
+node js/out/index.js algs4-data/tinyT.txt 
+```
+
+**Benchmark for 100,000 nums:**
+
+    - java ~0.35sec
+    - js ~1.1sec
+    - php ~3.3sec
+
