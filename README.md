@@ -70,7 +70,7 @@ node js/out/index.js algs4-data/tinyT.txt
 **Benchmark for 100,000 nums:**
 
     - java ~0.36sec
-    - js ~62sec
+    - js ~1.2sec
     - php ~3.6sec
 
 
