@@ -1,8 +1,8 @@
 'use strict';
 
-var _MergeBU = require('./sorting/MergeBU');
+var _Quick3Way = require('./sorting/Quick3Way');
 
-var _MergeBU2 = _interopRequireDefault(_MergeBU);
+var _Quick3Way2 = _interopRequireDefault(_Quick3Way);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18,7 +18,7 @@ arr = arr.filter(function (item) {
 });
 
 console.time('Runtime');
-var sort = new _MergeBU2.default(arr);
+var sort = new _Quick3Way2.default(arr);
 sort.sort();
 sort.show();
 console.timeEnd('Runtime');

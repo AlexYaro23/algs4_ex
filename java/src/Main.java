@@ -1,4 +1,4 @@
-import com.test.sorting.MergeBU;
+import com.test.sorting.Quick3Way;
 import com.test.util.StdIn;
 
 public class Main {
@@ -8,7 +8,7 @@ public class Main {
         int[] arr = StdIn.readAllInts();
 
         long startTime = System.currentTimeMillis();
-        MergeBU sort = new MergeBU(arr);
+        Quick3Way sort = new Quick3Way(arr);
         sort.sort();
         sort.show();
         long endTime = System.currentTimeMillis();

@@ -1,4 +1,4 @@
-import MergeBU from './sorting/MergeBU';
+import Quick3Way from './sorting/Quick3Way';
 let fs = require('fs');
 
 const filepath = process.argv.slice(2) + '';
@@ -7,7 +7,7 @@ let arr = fs.readFileSync(filepath, 'utf8').split(/[^\d]+/).map((item) => parseI
 arr = arr.filter(item => typeof item == "string" || (typeof item == "number" && item) || typeof item == 'undefined');
 
 console.time('Runtime');
-let sort = new MergeBU(arr);
+let sort = new Quick3Way(arr);
 sort.sort();
 sort.show();
 console.timeEnd('Runtime');

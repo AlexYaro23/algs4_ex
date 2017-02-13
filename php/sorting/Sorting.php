@@ -9,18 +9,16 @@ abstract class Sorting
         $this->data = $arr;
     }
     abstract public function sort();
-    protected function less($a, $b)
+    protected function less(int $a, int $b)
     {
         return (int) $a < (int) $b;
     }
 
-    protected function exch($arr, $i, $j)
+    protected function exch(int $i, int $j)
     {
-        $temp = $arr[$i];
-        $arr[$i] = $arr[$j];
-        $arr[$j] = $temp;
-
-        return $arr;
+        $temp = $this->data[$i];
+        $this->data[$i] = $this->data[$j];
+        $this->data[$j] = $temp;
     }
 
     public function show()
