@@ -106,3 +106,19 @@ node js/out/index.js algs4-data/tinyT.txt
     - js ~sec
     - php ~3.9sec
 
+
+##- Quick3Way
+
+``` 
+git checkout quick3way
+java -classpath java/out Main < algs4-data/tinyT.txt
+php php/index.php algs4-data/tinyT.txt
+node js/out/index.js algs4-data/tinyT.txt 
+```
+
+**Benchmark for 100,000 nums:**
+
+    - java ~0.32sec
+    - js ~0.65sec
+    - php ~3.38sec
+
